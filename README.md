@@ -67,18 +67,41 @@ Setup Instructions
 for application logs use:
     ```
     docker-compose logs -f web
+    docker compose  logs -f consumer
     ```
 
 API Endpoints
 - POST /notifications
     - Description: Create a new notification.
     - Request Body: {
-        "user_id": int,
-        "type": "email" | "slack" | "in-app",
-        "content": str,
-        "scheduled_time": datetime (optional)
-      }     
+        "user_group": 4,
+        "message":"",
+        "template": {
+            "template_id": 1,
+            "data": {"name": "Ketul Gupta 31"}
+        },
+        "channels": [
+            "email"
+        ] 
+        }   
+    - curl --location '0.0.0.0:8000/notify' \
+                --header 'Content-Type: application/json' \
+                --data '{
 
+                "user_group": 4,
+                "message":"",
+                "template": {
+                    "template_id": 1,
+                    "data": {"name": "Ketul Gupta 31"}
+                },
+                "channels": [
+                    "email"
+                ] 
+
+                }'
+
+    - There is api to view the notfication status as well.
+    - There is api to see templates and users
 
 # Notification Service Database Schema
 
@@ -156,4 +179,11 @@ Kafka Producer to send message to topic
 Producer topic messages
 
 ![alt text](image-4.png)
+
+
+
+Logs 
+![alt text](image-5.png)
+
+![alt text](image-6.png)
 
