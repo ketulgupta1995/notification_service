@@ -1,0 +1,63 @@
+# -------------------------------------------------------------------
+# Python
+# -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.build/
+dist/
+pip-wheel-metadata/
+*.log
+.devcontainer
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+
+# -------------------------------------------------------------------
+# FastAPI / Uvicorn
+# -------------------------------------------------------------------
+# General runtime files
+*.db
+instance/
+
+# -------------------------------------------------------------------
+# Docker
+# -------------------------------------------------------------------
+# Docker local data
+docker-data/
+*.pid
+
+# Ignore Docker build outputs
+build/
+tmp/
+
+# -------------------------------------------------------------------
+# IDE / Editor
+# -------------------------------------------------------------------
+# VSCode
+.vscode/
+.code/
+*.code-workspace
+
+# PyCharm / JetBrains
+.idea/
+
+# -------------------------------------------------------------------
+# Environment files
+# ----------------------------------------------
