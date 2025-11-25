@@ -138,3 +138,22 @@ Stores individual notification instances for users.
 - `Notification.user` → references `User`
 - `Notification.template` → references `Template`
 
+
+
+output
+Create Notification API 
+
+![alt text](image-1.png)
+
+Created Notification Table
+
+![alt text](image-2.png)
+
+Kafka Producer to send message to topic
+
+![alt text](image-3.png)
+
+Producer topic messages
+
+![alt text](image-4.png)
+
